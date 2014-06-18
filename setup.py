@@ -4,7 +4,7 @@ from setuptools import find_packages
 import os
 
 
-_version = '0.3'
+_version = '0.4'
 _packages = find_packages(exclude=["*.tests", "*.tests.*", "tests.*", "tests"])
 
 _short_description = "pylint-django is a Pylint plugin to aid Pylint in recognising and understanding" \
@@ -18,6 +18,18 @@ _package_data = {
     ]
 }
 
+_classifiers = (
+    'Development Status :: 4 - Beta',
+    'Environment :: Console',
+    'Intended Audience :: Developers',
+    'Operating System :: Unix',
+    'Topic :: Software Development :: Quality Assurance',
+    'Programming Language :: Python :: 2.6',
+    'Programming Language :: Python :: 2.7',
+    'Programming Language :: Python :: 3.3',
+    'Programming Language :: Python :: 3.4',
+)
+
 
 setup(
     name='pylint-django',
@@ -28,7 +40,8 @@ setup(
     version=_version,
     packages=_packages,
     package_data=_package_data,
-    install_requires=['pylint>=1.0', 'astroid>=1.0', 'logilab-common>=0.60.0', 'pylint-plugin-utils>=0.1.1'],
+    install_requires=['pylint>=1.0', 'astroid>=1.0', 'logilab-common>=0.60.0', 'pylint-plugin-utils>=0.2'],
     license='GPLv2',
+    classifiers=_classifiers,
     keywords='pylint django plugin'
 )
